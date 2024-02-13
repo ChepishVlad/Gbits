@@ -1,0 +1,7 @@
+## Interface: 60000
+## Title: Gbits
+## Notes: Shows the item's prices in raid
+## Author: VTsepish
+## DefaultState: enabled
+
+Gbits.lua
