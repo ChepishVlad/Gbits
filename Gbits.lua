@@ -1,307 +1,13 @@
-local icc_normal =
-{
-    ["Item50773"] = 650, 
-    ["Item50764"] = 650, 
-    ["Item50774"] = 650, 
-    ["Item50762"] = 650, 
-    ["Item50772"] = 650, 
-    ["Item50775"] = 500, 
-    ["Item50763"] = 650, 
-    ["Item50759"] = 800,
-    ["Item50771"] = 800, 
-    ["Item50760"] = 800, 
-    ["Item50761"] = 800, 
-    ["Item50339"] = 1000, 
-    ["Item36855"] = 1000, 
-    ["Item50785"] = 650, 
-    ["Item50782"] = 650, 
-    ["Item50780"] = 500, 
-    ["Item50778"] = 650, 
-    ["Item50783"] = 650, 
-    ["Item50777"] = 650, 
-    ["Item50784"] = 100, 
-    ["Item50786"] = 500, 
-    ["Item50779"] = 500, 
-    ["Item50781"] = 800, 
-    ["Item50776"] = 800, 
-    ["Item50342"] = 2000, 
-    ["Item50791"] = 650, 
-    ["Item50795"] = 100, 
-    ["Item50792"] = 500, 
-    ["Item50789"] = 650, 
-    ["Item50797"] = 500, 
-    ["Item50796"] = 650, 
-    ["Item50788"] = 650, 
-    ["Item50790"] = 650, 
-    ["Item50794"] = 800, 
-    ["Item50787"] = 800, 
-    ["Item50793"] = 800, 
-    ["Item50340"] = 2000, 
-    ["Item50807"] = 500, 
-    ["Item50804"] = 650, 
-    ["Item50799"] = 1000, 
-    ["Item50806"] = 500, 
-    ["Item50800"] = 500, 
-    ["Item50801"] = 500, 
-    ["Item50802"] = 650, 
-    ["Item50808"] = 800, 
-    ["Item50809"] = 1000, 
-    ["Item50803"] = 800, 
-    ["Item50805"] = 800, 
-    ["Item50798"] = 800, 
-    ["Item36626"] = 800, 
-    ["Item50988"] = 100, 
-    ["Item50990"] = 500, 
-    ["Item50859"] = 650, 
-    ["Item50858"] = 500, 
-    ["Item50985"] = 650, 
-    ["Item50812"] = 650,
-    ["Item50967"] = 500, 
-    ["Item50811"] = 500, 
-    ["Item50852"] = 250, 
-    ["Item50986"] = 680, 
-    ["Item50810"] = 800, 
-    ["Item50966"] = 800, 
-    ["Item36627"] = 800, 
-    ["Item51005"] = 500, 
-    ["Item51007"] = 650, 
-    ["Item51009"] = 500, 
-    ["Item51006"] = 650, 
-    ["Item51002"] = 500, 
-    ["Item51000"] = 650, 
-    ["Item51008"] = 650, 
-    ["Item51001"] = 650, 
-    ["Item50999"] = 800, 
-    ["Item51003"] = 800, 
-    ["Item51004"] = 800, 
-    ["Item50998"] = 800,
-    ["Item36678"] = 800,
-    ["Item51020"] = 500, 
-    ["Item51017"] = 650, 
-    ["Item51013"] = 500, 
-    ["Item51015"] = 500,
-    ["Item51019"] = 650, 
-    ["Item51018"] = 500, 
-    ["Item51014"] = 500, 
-    ["Item51012"] = 650, 
-    ["Item51016"] = 650, 
-    ["Item51011"] = 800, 
-    ["Item51010"] = 800, 
-    ["Item50341"] = 1000, 
-    ["Item37970"] = 1000, 
-    ["Item51380"] = 650, 
-    ["Item51379"] = 500, 
-    ["Item51382"] = 650, 
-    ["Item51023"] = 650, 
-    ["Item51325"] = 650, 
-    ["Item51025"] = 500, 
-    ["Item51383"] = 500, 
-    ["Item51024"] = 650, 
-    ["Item51381"] = 650, 
-    ["Item51326"] = 800, 
-    ["Item51021"] = 800, 
-    ["Item51022"] = 800, 
-    ["Item37955"] = 800, 
-    ["Item51554"] = 500, 
-    ["Item51552"] = 650, 
-    ["Item51550"] = 500, 
-    ["Item51551"] = 500, 
-    ["Item51556"] = 500, 
-    ["Item51386"] = 500, 
-    ["Item51555"] = 100, 
-    ["Item51387"] = 650, 
-    ["Item51548"] = 650, 
-    ["Item51553"] = 800, 
-    ["Item51384"] = 800, 
-    ["Item51385"] = 800, 
-    ["Item36789"] = 800, 
-    ["Item51777"] = 500, 
-    ["Item51584"] = 650, 
-    ["Item51585"] = 500, 
-    ["Item51565"] = 500, 
-    ["Item51566"] = 500, 
-    ["Item51583"] = 650, 
-    ["Item51586"] = 100, 
-    ["Item51564"] = 650, 
-    ["Item51563"] = 650, 
-    ["Item51582"] = 800, 
-    ["Item51561"] = 800, 
-    ["Item51562"] = 800, 
-    ["Item36853"] = 800, 
-    ["Item51790"] = 650, 
-    ["Item51789"] = 500, 
-    ["Item51783"] = 650, 
-    ["Item51785"] = 650, 
-    ["Item51792"] = 500, 
-    ["Item51787"] = 650, 
-    ["Item51782"] = 650, 
-    ["Item51786"] = 500, 
-    ["Item51779"] = 1000, 
-    ["Item51791"] = 800, 
-    ["Item51788"] = 800, 
-    ["Item51784"] = 800, 
-    ["Item36597"] = 800, 
-    ["Item51800"] = 1000, 
-    ["Item51803"] = 1000, 
-    ["Item51801"] = 1000, 
-    ["Item51795"] = 1000, 
-    ["Item51798"] = 1000, 
-    ["Item51797"] = 1000, 
-    ["Item51799"] = 1000, 
-    ["Item51796"] = 1000, 
-    ["Item51802"] = 1000
-}
+local n, ns = ...
 
-local icc25_normal = 
-{
-    ["Item49978"] = 2000, 
-    ["Item49979"] = 1000, 
-    ["Item49950"] = 2000, 
-    ["Item49952"] = 1000, 
-    ["Item49980"] = 1000, 
-    ["Item49964"] = 1400, 
-    ["Item49960"] = 1400, 
-    ["Item49951"] = 1000, 
-    ["Item49977"] = 1400, 
-    ["Item49949"] = 1400, 
-    ["Item49967"] = 1400, 
-    ["Item49975"] = 1400, 
-    ["Item49968"] = 2000, 
-    ["Item50415"] = 2000, 
-    ["Item49976"] = 2000, 
-    ["Item36855"] = 2000, 
-    ["Item49991"] = 1000, 
-    ["Item49994"] = 1000, 
-    ["Item49996"] = 1000, 
-    ["Item49987"] = 1000, 
-    ["Item49993"] = 1400, 
-    ["Item49988"] = 1000, 
-    ["Item49995"] = 1000, 
-    ["Item49983"] = 1400, 
-    ["Item49986"] = 1000, 
-    ["Item49990"] = 1400, 
-    ["Item49985"] = 1400, 
-    ["Item49989"] = 1400, 
-    ["Item49982"] = 2000,
-    ["Item50034"] = 2000, 
-    ["Item49992"] = 2000, 
-    ["Item50006"] = 1400, 
-    ["Item50011"] = 1500, 
-    ["Item49998"] = 1700, 
-    ["Item50009"] = 1400, 
-    ["Item50001"] = 2000, 
-    ["Item50000"] = 1400, 
-    ["Item50010"] = 1400, 
-    ["Item50003"] = 1000, 
-    ["Item50002"] = 1400, 
-    ["Item49999"] = 1400, 
-    ["Item50008"] = 1400, 
-    ["Item50005"] = 1400, 
-    ["Item50411"] = 1600, 
-    ["Item50352"] = 1000, 
-    ["Item50359"] = 1000, 
-    ["Item50014"] = 1400, 
-    ["Item50333"] = 2000, 
-    ["Item50015"] = 1400, 
-    ["Item50412"] = 2000, 
-    ["Item50362"] = 5000, 
-    ["Item36626"] = 5000, 
-    ["Item50056"] = 1400, 
-    ["Item50063"] = 1400, 
-    ["Item50062"] = 1400,
-    ["Item50041"] = 1000, 
-    ["Item50042"] = 2000, 
-    ["Item50064"] = 1000, 
-    ["Item50038"] = 1000, 
-    ["Item50059"] = 1000, 
-    ["Item50413"] = 1400, 
-    ["Item50060"] = 1000, 
-    ["Item50036"] = 1400, 
-    ["Item50037"] = 1400, 
-    ["Item50414"] = 1400, 
-    ["Item50061"] = 1400, 
-    ["Item50035"] = 2000, 
-    ["Item50040"] = 2000, 
-    ["Item36627"] = 2000, 
-    ["Item50032"] = 1400, 
-    ["Item50019"] = 1400, 
-    ["Item50021"] = 2000, 
-    ["Item50026"] = 1000, 
-    ["Item50022"] = 1000, 
-    ["Item50030"] = 2000, 
-    ["Item50024"] = 1000, 
-    ["Item50020"] = 1000, 
-    ["Item50027"] = 1400, 
-    ["Item50025"] = 1400, 
-    ["Item50023"] = 1400, 
-    ["Item50016"] = 2000, 
-    ["Item50033"] = 2000, 
-    ["Item50028"] = 2000, 
-    ["Item50353"] = 5000, 
-    ["Item50069"] = 1500, 
-    ["Item50067"] = 2000, 
-    ["Item50068"] = 2000, 
-    ["Item50179"] = 2000, 
-    ["Item50351"] = 6000, 
-    ["Item37970"] = 6000, 
-    ["Item50172"] = 1400, 
-    ["Item50176"] = 1000, 
-    ["Item50074"] = 1400, 
-    ["Item50073"] = 1000, 
-    ["Item50171"] = 1400, 
-    ["Item50071"] = 1400, 
-    ["Item50177"] = 1000, 
-    ["Item50072"] = 1000, 
-    ["Item50075"] = 1400, 
-    ["Item50175"] = 1400, 
-    ["Item50170"] = 1400, 
-    ["Item50174"] = 1400, 
-    ["Item50184"] = 2000, 
-    ["Item50173"] = 4000, 
-    ["Item49919"] = 2500, 
-    ["Item37955"] = 2500, 
-    ["Item50182"] = 5000, 
-    ["Item50180"] = 1400, 
-    ["Item50065"] = 2500, 
-    ["Item50178"] = 2000, 
-    ["Item50181"] = 2000, 
-    ["Item50354"] = 5000, 
-    ["Item50418"] = 1400, 
-    ["Item50205"] = 1400, 
-    ["Item50417"] = 1400, 
-    ["Item50188"] = 1400, 
-    ["Item50202"] = 1000, 
-    ["Item50190"] = 1400, 
-    ["Item50192"] = 1000, 
-    ["Item50199"] = 1000, 
-    ["Item50416"] = 1000, 
-    ["Item50187"] = 2000, 
-    ["Item50185"] = 1400, 
-    ["Item50186"] = 2000, 
-    ["Item50195"] = 1400, 
-    ["Item50183"] = 2000, 
-    ["Item50472"] = 2000, 
-    ["Item36853"] = 2000, 
-    ["Item50424"] = 1400, 
-    ["Item50421"] = 2000, 
-    ["Item50423"] = 2000, 
-    ["Item50361"] = 6000, 
-    ["Item50360"] = 6000, 
-    ["Item36597"] = 6000, 
-    ["Item50426"] = 5000, 
-    ["Item50427"] = 3500, 
-    ["Item50012"] = 4000, 
-    ["Item50428"] = 3500, 
-    ["Item49997"] = 5000, 
-    ["Item50070"] = 5000, 
-    ["Item50425"] = 5000, 
-    ["Item50429"] = 5000, 
-    ["Item49981"] = 4000,
-    ["Item50226"] = 2000,
-    ["Item50231"] = 2000,
-    ["Item50274"] = 1700,
-    ["Item52019"] = 500,
-}
+local rs_normal = ns.rs_normal
+local rs_heroic = ns.rs_heroic
+local toc25_normal = ns.toc25_normal
+local toc25_heroic = ns.toc25_heroic
+local icc_normal = ns.icc10_normal
+local icc10_heroic = ns.icc10_heroic
+local icc25_normal = ns.icc25_normal
+local icc25_heroic = ns.icc25_heroic
 
 ------------------------------------------------------------------------
 function Gbits_HookSetItem() ItemName, ItemLink = GameTooltip:GetItem(); Gbits_HookItem(ItemName, ItemLink, GameTooltip); end
@@ -330,14 +36,17 @@ function Gbits_HookItem(ItemName, ItemLink, Tooltip)
             date_coef = 1
         end
     end
-    --print(date_coef)
 
     local item_id = ItemLink and string.match(ItemLink, "item:(%d+)")
     local key = "Item" .. item_id
 
     local item_type, item_sub_type, _, equi_loc  = select(6, GetItemInfo(item_id))
-    local item_type_coef = 1
-    if equi_loc == "INVTYPE_WEAPON" or equi_loc == "INVTYPE_SHIELD" then 
+    local item_type_coef = 2
+    if equi_loc == "INVTYPE_WEAPON" 
+        or equi_loc == "INVTYPE_SHIELD" 
+        or equi_loc == "INVTYPE_HOLDABLE"
+        or item_type == "Weapon" 
+        or item_type == "Оружие" then 
         item_type_coef = 2.5
     elseif equi_loc == "INVTYPE_TRINKET" then
         item_type_coef = 3
@@ -352,7 +61,37 @@ function Gbits_HookItem(ItemName, ItemLink, Tooltip)
         price = icc25_normal[key] * date_coef
         Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
     end
+
+    if rs_normal[key] then 
+        price = rs_normal[key] * date_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
+
+    if toc25_normal[key] then 
+        price = toc25_normal[key] * date_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
     
+    if icc25_heroic[key] then
+        price = icc25_heroic[key] * date_coef * item_type_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
+
+    if icc10_heroic[key] then
+        price = icc10_heroic[key] * date_coef * item_type_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
+
+    if rs_heroic[key] then
+        price = rs_heroic[key] * date_coef * item_type_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
+
+    if toc25_heroic[key] then
+        price = toc25_heroic[key] * date_coef * item_type_coef
+        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+    end
+
 end
 
 GameTooltip:HookScript("OnTooltipSetItem", Gbits_HookSetItem)

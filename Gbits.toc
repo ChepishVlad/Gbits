@@ -1,7 +1,12 @@
-## Interface: 60000
+## Interface: 70000
 ## Title: Gbits
 ## Notes: Shows the item's prices in raid
 ## Author: VTsepish
 ## DefaultState: enabled
 
-Gbits.lua
+icecrown_citadel.lua
+ruby_sanctum.lua
+trial_of_the_crusader.lua
+gbits.lua
+
+
