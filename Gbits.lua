@@ -8,6 +8,7 @@ local icc_normal = ns.icc10_normal
 local icc10_heroic = ns.icc10_heroic
 local icc25_normal = ns.icc25_normal
 local icc25_heroic = ns.icc25_heroic
+local toc25_heroic_tokens = ns.toc25_heroic_tokens
 local weapon_loc = {
     "INVTYPE_WEAPON", 
     "INVTYPE_SHIELD", 
@@ -98,6 +99,12 @@ function Gbits_HookItem(ItemName, ItemLink, Tooltip)
             price = toc25_heroic[key] * date_coef * item_type_coef
             Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
         end
+
+        if toc25_heroic_tokens[key] then
+            price = toc25_heroic_tokens[key] * date_coef * 3
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
+
     end
 
 end
