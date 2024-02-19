@@ -8,6 +8,17 @@ local icc_normal = ns.icc10_normal
 local icc10_heroic = ns.icc10_heroic
 local icc25_normal = ns.icc25_normal
 local icc25_heroic = ns.icc25_heroic
+local weapon_loc = {
+    "INVTYPE_WEAPON", 
+    "INVTYPE_SHIELD", 
+    "INVTYPE_RANGED", 
+    "INVTYPE_2HWEAPON", 
+    "INVTYPE_WEAPONMAINHAND", 
+    "INVTYPE_WEAPONOFFHAND",
+    "INVTYPE_HOLDABLE",
+    "INVTYPE_THROWN",
+    "INVTYPE_RANGEDRIGHT"
+}
 
 ------------------------------------------------------------------------
 function Gbits_HookSetItem() ItemName, ItemLink = GameTooltip:GetItem(); Gbits_HookItem(ItemName, ItemLink, GameTooltip); end
@@ -15,9 +26,7 @@ function Gbits_HookRefItem() ItemName, ItemLink = ItemRefTooltip:GetItem(); Gbit
 
 
 function Gbits_HookItem(ItemName, ItemLink, Tooltip)
-    --if not ( IsEquippableItem(ItemLink) ) then return; end
 
-    -- get coef depends on date
     _, month, day, _ = CalendarGetDate()
     if month == 3 or month == 4 then
         date_coef = 1
@@ -38,58 +47,57 @@ function Gbits_HookItem(ItemName, ItemLink, Tooltip)
     end
 
     local item_id = ItemLink and string.match(ItemLink, "item:(%d+)")
-    local key = "Item" .. item_id
+    if item_id then
+        local key = "Item" .. item_id 
 
-    local item_type, item_sub_type, _, equi_loc  = select(6, GetItemInfo(item_id))
-    local item_type_coef = 2
-    if equi_loc == "INVTYPE_WEAPON" 
-        or equi_loc == "INVTYPE_SHIELD" 
-        or equi_loc == "INVTYPE_HOLDABLE"
-        or item_type == "Weapon" 
-        or item_type == "Оружие" then 
-        item_type_coef = 2.5
-    elseif equi_loc == "INVTYPE_TRINKET" then
-        item_type_coef = 3
-    end
+        local item_type, item_sub_type, _, equi_loc  = select(6, GetItemInfo(item_id))
+        local item_type_coef = 2
 
-    if icc_normal[key] then 
-        price = icc_normal[key] * date_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if ns.contains(weapon_loc, equi_loc) then
+            item_type_coef = 2.5
+        elseif equi_loc == "INVTYPE_TRINKET" then
+            item_type_coef = 3
+        end
 
-    if icc25_normal[key] then 
-        price = icc25_normal[key] * date_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if icc_normal[key] then 
+            price = icc_normal[key] * date_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
 
-    if rs_normal[key] then 
-        price = rs_normal[key] * date_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if icc25_normal[key] then 
+            price = icc25_normal[key] * date_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
 
-    if toc25_normal[key] then 
-        price = toc25_normal[key] * date_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
-    
-    if icc25_heroic[key] then
-        price = icc25_heroic[key] * date_coef * item_type_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if rs_normal[key] then 
+            price = rs_normal[key] * date_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
 
-    if icc10_heroic[key] then
-        price = icc10_heroic[key] * date_coef * item_type_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if toc25_normal[key] then 
+            price = toc25_normal[key] * date_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
+        
+        if icc25_heroic[key] then
+            price = icc25_heroic[key] * date_coef * item_type_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
 
-    if rs_heroic[key] then
-        price = rs_heroic[key] * date_coef * item_type_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
-    end
+        if icc10_heroic[key] then
+            price = icc10_heroic[key] * date_coef * item_type_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
 
-    if toc25_heroic[key] then
-        price = toc25_heroic[key] * date_coef * item_type_coef
-        Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        if rs_heroic[key] then
+            price = rs_heroic[key] * date_coef * item_type_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
+
+        if toc25_heroic[key] then
+            price = toc25_heroic[key] * date_coef * item_type_coef
+            Tooltip:AddLine("Actual Gbit price is: ".. price, 1, 0, 1)
+        end
     end
 
 end
