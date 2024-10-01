@@ -35,7 +35,7 @@ function Gbits_HookItem(ItemName, ItemLink, Tooltip)
         date_coef = 1.5
     elseif month == 7 or month == 8 then
         date_coef = 2
-    elseif month == 9 or month == 11 then
+    elseif month >= 9 and month <= 11 then
         date_coef = 2.5
     elseif month == 12 or month == 1 then
         date_coef = 3
